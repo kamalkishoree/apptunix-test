@@ -36,10 +36,10 @@ Before using the collection, ensure you have set up the project locally and repl
 
 - **Login:** `{{url}}/api/login`
 - **Logout:** `{{url}}/api/logout`
-- **Create Product:** `{{staging_url}}/api/product/create`
-- **List Products:** `{{staging_url}}/api/products`
-- **View Product:** `{{staging_url}}/api/product/{{id}}`
-- **Edit Product:** `{{staging_url}}/api/product/edit/{{id}}`
-- **Delete Product:** `{{staging_url}}/api/product/delete/{{id}}`
+- **Create Product:** `{{url}}/api/product/create`
+- **List Products:** `{{url}}/api/products`
+- **View Product:** `{{url}}/api/product/{{id}}`
+- **Edit Product:** `{{url}}/api/product/edit/{{id}}`
+- **Delete Product:** `{{url}}/api/product/delete/{{id}}`
 
 Note: Product operations can only be performed via the API. The front-end only implements user session-based cart functionality.
