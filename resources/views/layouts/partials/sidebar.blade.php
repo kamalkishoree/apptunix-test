@@ -29,12 +29,12 @@
     <!-- Nav Item - Pages Collapse Menu -->
 
     <!-- Nav Item - Charts -->
+
     <li class="nav-item">
-        <a class="nav-link" href="{{ route('product.index') }}">
+        <a class="nav-link" href="{{ route('todo-tasks.index') }}">
+
             <i class="fas fa-fw fa-chart-area"></i>
-            <span>Products</span></a>
+            <span>Task</span></a>
     </li>
-
-
 
 </ul>

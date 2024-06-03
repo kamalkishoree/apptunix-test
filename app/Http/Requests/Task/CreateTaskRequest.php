@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests;
+namespace App\Http\Requests\Task;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CreateUserRequest extends FormRequest
+class CreateTaskRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,18 +22,18 @@ class CreateUserRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => 'required',
-            'email' => 'required|email|unique:users,email',
-            'password' => 'required|digits:8|min:8',
-            'password_confirmation' => 'required_with:password|same:password|digits:8',
-
+            [
+                'title' => 'required|string|max:255',
+                'description' => 'nullable|string',
+            ]
         ];
     }
 
-    public function messages(): array
+    public function messages()
     {
-        return[
-            'password' =>'password must be integer and should contain 8 digi'
+        return  [
+            'title.required' => 'The title field is required.',
+            'title.max' => 'The title may not be greater than 255 characters.',
         ];
     }
 }

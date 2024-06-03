@@ -61,6 +61,10 @@ class LoginController extends Controller
             'email'=> $request->input('email'),
             'password' => Hash::make($request->input('password')),
         ];
+
+        // echo "<pre>";
+        // print_r($request->all());
+        // die;
         $user = User::create($data);
         if($user)
         {

@@ -31,6 +31,14 @@
                 @endif
             </div>
 
+               <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+                <input name="password_confirmation" type="" class="form-control" id="exampleInputPassword1">
+                @if ($errors->has('password_confirmation'))
+                    <div class="error">{{ $errors->first('password_confirmation') }}</div>
+                @endif
+            </div>
+
             <button type="submit" class="btn btn-primary">Submit</button>
 
             <p>Already have an account go back to login. <a class="btn btn-primary" href="{{ route('user.login.index') }}">

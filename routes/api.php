@@ -16,15 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::post('/login',[LoginController::class,'login'])->name('login');
+Route::post('/login', [LoginController::class, 'login'])->name('login');
 
 Route::middleware(['auth:api'])->group(function () {
-    Route::post('/logout',[LoginController::class,'logout'])->name('logout');
-    Route::post('/product/create',[ProductController::class,'create'])->name('product.create');
-    Route::get('/products',[ProductController::class,'index'])->name('products');
-    Route::get('/product/{id}',[ProductController::class,'view'])->name('product.view');
-    Route::post('/product/edit/{id}',[ProductController::class,'edit'])->name('product.edit');
-    Route::post('/product/delete/{id}',[ProductController::class,'delete'])->name('product.delete');
-
-
 });
